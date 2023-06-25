@@ -1,0 +1,21 @@
+{
+  "name": "com.freddiebabord.pooled-collection",
+  "version": "0.1.0",
+  "displayName": "Pooled Collection",
+  "description": "Fast, low-allocation ports of List, Dictionary, HashSet, Stack, and Queue using ArrayPool and Span.",
+  "unity": "2020.1",
+  "unityRelease": "0f1",
+  "documentationUrl": "https://github.com/freddiebabord/Collections.Pooled/wiki",
+  "changelogUrl": "https://github.com/freddiebabord/Collections.Pooled/releases",
+  "licensesUrl": "https://github.com/freddiebabord/Collections.Pooled/blob/master/LICENSE.txt",
+  "dependencies": { },
+  "keywords": [
+    "Collections",
+    "Pooled"
+  ],
+  "author": {
+    "name": "Freddie Babord",
+    "email": "freddie.babord@gmail.com",
+    "url": "https://github.com/freddiebabord"
+  }
+}
