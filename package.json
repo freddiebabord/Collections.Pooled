@@ -2,7 +2,7 @@
   "name": "com.freddiebabord.pooled-collection",
   "version": "0.1.0",
   "displayName": "Pooled Collection",
-  "description": "Fast, low-allocation ports of List, Dictionary, HashSet, Stack, and Queue using ArrayPool and Span.",
+  "description": "Fast, low-allocation ports of List, Dictionary, HashSet, Stack, and Queue using ArrayPool and Span for Unity.",
   "unity": "2020.1",
   "unityRelease": "0f1",
   "documentationUrl": "https://github.com/freddiebabord/Collections.Pooled/wiki",

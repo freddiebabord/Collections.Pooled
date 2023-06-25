@@ -1,9 +1,5 @@
 # Collections.Pooled 
 
-| Master | Latest  |
-|--------|---------|
-| [![Build status](https://ci.appveyor.com/api/projects/status/vb6j2jon32ia5qq4/branch/master?svg=true)](https://ci.appveyor.com/project/jtmueller/collections-pooled/branch/master) | [![Build status](https://ci.appveyor.com/api/projects/status/vb6j2jon32ia5qq4?svg=true)](https://ci.appveyor.com/project/jtmueller/collections-pooled) |
-
 This library is based on classes from `System.Collections.Generic` that have been altered 
 to take advantage of the new `System.Span<T>` and `System.Buffers.ArrayPool<T>` libraries 
 to minimize memory allocations, improve performance, and/or allow greater interoperablity 
@@ -13,25 +9,12 @@ Collections.Pooled supports both .NET Standard 2.0 (.NET Framework 4.6.1+) as we
 optimized build for .NET Core 2.1+. An extensive set of unit tests and benchmarks have
 been ported from [corefx](https://github.com/dotnet/corefx).
 
-```
-Total tests: 27501. Passed: 27501. Failed: 0. Skipped: 0.
-Test Run Successful.
-Test execution time: 9.9019 Seconds
-```
 
 ## Installation
-
-[![NuGet Version](https://img.shields.io/nuget/v/Collections.Pooled.svg?style=flat)](https://www.nuget.org/packages/Collections.Pooled/) 
 ```
-Install-Package Collections.Pooled
-dotnet add package Collections.Pooled
-paket add Collections.Pooled
+Open the Unity Package Manager
+Add new from git URL: https://github.com/freddiebabord/Collections.Pooled
 ```
-
-## Benchmarks
-
-  * [.NET Core](https://github.com/jtmueller/Collections.Pooled/tree/master/docs/benchmarks/netcoreapp2.2)
-  * [.NET Framework](https://github.com/jtmueller/Collections.Pooled/tree/master/docs/benchmarks/net472)
 
 ## `PooledList<T>`
 
@@ -71,10 +54,6 @@ There are some API changes worth noting:
 	then entries in the list may have a previously-used value from the array pool. This feature is primarily useful
 	when working with value types and avoiding unnecessary allocations.
 
-#### Performance
-
-Adding items to a list is one area where ArrayPool helps us quite a bit:
-![List Add Benchmarks](./docs/benchmarks/netcoreapp2.2/List_Add.svg) 
 
 ## `PooledDictionary<TKey, TValue>`
 
@@ -94,10 +73,6 @@ There are some API changes worth noting:
   * The `ClearMode` constructor parameter gives you control over whether data is cleared before returning
     arrays to the ArrayPool.
 
-#### Performance
-
-Adding to dictionaries is where using ArrayPool really has an impact:
-![Dictionary Add Benchmarks](./docs/benchmarks/netcoreapp2.2/Dict_Add.svg) 
 
 ## `PooledSet<T>`
 
@@ -116,11 +91,6 @@ modified to use ArrayPool for internal storage allocation, and to support `ReadO
   * The `ClearMode` constructor parameter gives you control over whether data is cleared before returning
     arrays to the ArrayPool.
 
-#### Performance
-
-Here's what pooling does for us when adding to a PooledSet. 
-
-![Set Add Benchmarks](./docs/benchmarks/netcoreapp2.2/Set_Add.svg) 
 
 ## `PooledStack<T>`
 
@@ -140,10 +110,6 @@ modified to use ArrayPool for internal storage allocation.
   * The `ClearMode` constructor parameter gives you control over whether data is cleared before returning
     arrays to the ArrayPool.
 
-#### Performance
-
-Once again, pushing to a stack shows off some of the advantages of using ArrayPool:
-![Stack Push Benchmarks](./docs/benchmarks/netcoreapp2.2/Stack_Push.svg) 
 
 ## `PooledQueue<T>`
 
@@ -163,6 +129,3 @@ modified to use ArrayPool for internal storage allocation.
   * The `ClearMode` constructor parameter gives you control over whether data is cleared before returning
     arrays to the ArrayPool.
 
-#### Performance
-
-![Queue Enqueue Benchmarks](./docs/benchmarks/netcoreapp2.2/Queue_Enqueue.svg)
